@@ -15,4 +15,4 @@ You can easily integrate **NestSocks** into your HTML projects using the followi
 
 ### Available Themes
 
-Go to the Website [NestSocks Help](https://calestialashley35.github.io/NestSocksHelp/) to see all
+Visit [Themes.md](https://github.com/CalestialAshley35/NestSocks/blob/c83fdb684c77c4ef1f2f1b5962ee663eb178fe46/themes.md)
