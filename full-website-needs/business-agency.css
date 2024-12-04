@@ -1,0 +1,260 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f3f4f6, #e5e5e5);
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header .nav {
+  display: flex;
+  gap: 2rem;
+}
+
+header .nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header .nav a:hover {
+  color: #0077ff;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #0077ff, #0039e6);
+  color: #fff;
+  border-radius: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero .cta {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #ff9900;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero .cta:hover {
+  background: #cc7a00;
+  transform: scale(1.05);
+}
+
+/* About Section */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin: 4rem 0;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0077ff;
+}
+
+.about-text p {
+  line-height: 1.8;
+  color: #666;
+}
+
+/* Services Section */
+.services {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ff6347;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  color: #666;
+}
+
+/* Testimonials Section */
+.testimonials {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  color: #50c878;
+  margin-bottom: 2rem;
+}
+
+.testimonial-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  scroll-snap-type: x mandatory;
+}
+
+.testimonial-card {
+  flex: 0 0 300px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: #555;
+}
+
+.testimonial-card .author {
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #333;
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  color: #0077ff;
+  margin-bottom: 1rem;
+}
+
+.contact a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #ff6347, #ff4500);
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.contact a:hover {
+  background: linear-gradient(90deg, #ff4500, #ff6347);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: #101010;
+  color: #666;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
