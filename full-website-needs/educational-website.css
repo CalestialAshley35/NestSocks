@@ -1,0 +1,267 @@
+/* Base Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    font-size: 2.8em;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: #495057;
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-in-out;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ff5733;
+}
+
+/* Main Content Section */
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+    padding: 40px 0;
+    animation: slideInUp 1.5s ease-out;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transform: scale(0.95);
+    animation: scaleUp 0.5s ease-in-out forwards;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card .content {
+    padding: 20px;
+}
+
+.card .title {
+    font-size: 1.7em;
+    margin-bottom: 10px;
+    color: #343a40;
+}
+
+.card .description {
+    font-size: 1em;
+    color: #777;
+    line-height: 1.5;
+}
+
+/* Course Highlights Section */
+.course-highlights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.course-highlights h2 {
+    font-size: 2.5em;
+    color: #343a40;
+    margin-bottom: 30px;
+}
+
+.highlight {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    padding: 30px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.highlight h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.highlight p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Contact Form */
+.contact-form {
+    background-color: #343a40;
+    color: #fff;
+    padding: 50px 20px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.contact-form h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 80%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.contact-form button {
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: #e04e00;
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 90%;
+    }
+
+    .course-highlights h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 2.2em;
+    }
+
+    .course-highlights h2 {
+        font-size: 1.8em;
+    }
+
+    .card .title {
+        font-size: 1.5em;
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+    }
+}
